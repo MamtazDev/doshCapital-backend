@@ -74,8 +74,47 @@ const getAllUser = async (req, res) => {
   }
 };
 
+const deleteUser = async (req, res) => {
+  try {
+    await User.findOneAndDelete({ _id: req.params.id })
+      .exec()
+      .then((result) => {
+        res.status(200).send({
+          message: "User is successfully removed!",
+          status: 200,
+        });
+      })
+      .catch((err) => {
+        res.send({
+          message: err.message,
+        });
+      });
+  } catch (err) {
+    res.status(500).send({
+      message: err.message,
+    });
+  }
+};
+
+const getUser = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id, {
+      name: 1,
+      email: 1,
+    });
+
+    res.send(user);
+  } catch (err) {
+    res.status(500).send({
+      message: err.message,
+    });
+  }
+};
+
 module.exports = {
   registerUser,
   loginUser,
   getAllUser,
+  deleteUser,
+  getUser,
 };
