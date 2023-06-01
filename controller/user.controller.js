@@ -34,6 +34,33 @@ const registerUser = async (req, res) => {
   }
 };
 
+const loginUser = async (req, res) => {
+  try {
+    const user = await User.findOne({ email: req.body.email });
+
+    if (user && bcrcypt.compareSync(req.body.password, user.password)) {
+      const accessToken = await genearteToken(user);
+
+      return res.status(200).send({
+        message: "Logged in successfully",
+        user,
+        accessToken,
+        status: 200,
+      });
+    } else {
+      res.status(401).send({
+        message: "Invalid user or password",
+        status: 401,
+      });
+    }
+  } catch (err) {
+    res.status(500).send({
+      message: err.message,
+    });
+  }
+};
+
 module.exports = {
   registerUser,
+  loginUser,
 };
