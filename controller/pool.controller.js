@@ -25,6 +25,8 @@ const createPool = async (req, res) => {
 
 const getAllPools = async (req, res) => {
   try {
+    // const allPool = await Pool.find({});
+    // const allPool = await Pool.find({}).populate("depositedPeoples.depositor");
     const allPool = await Pool.find({});
     res.status(200).send(allPool);
   } catch (err) {

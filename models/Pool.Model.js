@@ -2,8 +2,13 @@ const mongoose = require("mongoose");
 
 const depositedPeoplesSchema = new mongoose.Schema(
   {
-    depositor: mongoose.Schema.Types.ObjectId,
-    amount: Number,
+    depositor: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    amount: {
+      type: Number,
+    },
   },
   { timestamps: true }
 );
