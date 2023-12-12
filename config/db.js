@@ -9,6 +9,7 @@ const connectDB = async () => {
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        serverSelectionTimeoutMS: 20000,
       }
     );
     console.log("mongodb connection success!");
