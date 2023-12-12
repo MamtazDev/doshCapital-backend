@@ -7,8 +7,6 @@ const connectDB = async () => {
     await mongoose.connect(
       `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.6ds5s8q.mongodb.net/doshCapital`,
       {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
         serverSelectionTimeoutMS: 20000,
       }
     );
