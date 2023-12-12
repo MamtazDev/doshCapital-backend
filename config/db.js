@@ -7,7 +7,7 @@ const connectDB = async () => {
     await mongoose.connect(
       `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.6ds5s8q.mongodb.net/doshCapital`,
       {
-        serverSelectionTimeoutMS: 20000,
+        serverSelectionTimeoutMS: 50000,
       }
     );
     console.log("mongodb connection success!");
