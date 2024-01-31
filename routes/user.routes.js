@@ -7,9 +7,7 @@ const {
   getUser,
 } = require("../controller/user.controller");
 const { isAuth } = require("../utils/middleware");
-
 const router = express.Router();
-
 router.post("/signup", registerUser);
 router.post("/login", loginUser);
 router.get("/", getAllUser);
