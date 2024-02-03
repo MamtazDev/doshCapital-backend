@@ -26,7 +26,8 @@ const sendEmail = async (req, res) => {
   });
   const mailOptions = {
     from: process.env.GMAIL_USER,
-    to: [req.body.email, "dustyarcher@yahoo.com"],
+    to: [req.body.email],
+    // dusty mail "dustyarcher@yahoo.com"
     subject: "Dosh Capital",
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
