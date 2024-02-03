@@ -59,8 +59,8 @@ const sendEmail = async (req, res) => {
       border="0"
       cellpadding="0"
       cellspacing="0"
-      style="margin: 0; padding: 0"
-      width="100%">
+      style="margin: 0 auto; padding: 20px; border: 1px solid gray; border-radius: 15px;"
+      width="375px">
       <tr>
         <td colspan="12" width="100%" vertical-align="middle">
           <tr>
@@ -372,8 +372,7 @@ const sendEmail = async (req, res) => {
     </table>
   </body>
 </html>
-
-    `,
+`,
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (!req.body.email) {
