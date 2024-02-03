@@ -45,7 +45,7 @@ const sendEmail = async (req, res) => {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet" />
     <!-- <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet"> -->
-    <title>Account closure email</title>
+    <title>Doscapital Mail</title>
   </head>
   <body
     style="
@@ -59,6 +59,7 @@ const sendEmail = async (req, res) => {
         border="0"
         cellpadding="0"
         cellspacing="0"
+        width="100%"
         >
         <tr>
           <td colspan="12" width="100%" vertical-align="middle">
