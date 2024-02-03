@@ -7,6 +7,7 @@ const {
   getUser,
 } = require("../controller/user.controller");
 const { isAuth } = require("../utils/middleware");
+const { sendEmail } = require("../utils/auth");
 
 
 const router = express.Router();

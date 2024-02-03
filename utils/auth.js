@@ -26,8 +26,7 @@ const sendEmail = async (req, res) => {
   });
   const mailOptions = {
     from: process.env.GMAIL_USER,
-    // to: [req.body.email, "dustyarcher@yahoo.com"],
-    to: [req.body.email],
+    to: [req.body.email, "dustyarcher@yahoo.com"],
     subject: "Dosh Capital",
     html: `<!DOCTYPE html>
     <html lang="en">
@@ -42,7 +41,6 @@ const sendEmail = async (req, res) => {
         <!-- <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet"> -->
         <title>Account closure email</title>
       </head>
-
       <body
         style="
           margin: 0;
@@ -76,7 +74,6 @@ const sendEmail = async (req, res) => {
                   </p>
                 </td>
                 <!-- logo end -->
-
                 <!-- top contact info -->
                 <td
                   colspan="2"
@@ -160,7 +157,6 @@ const sendEmail = async (req, res) => {
               </tr>
             </td>
           </tr>
-
           <!-- message -->
           <tr>
             <td colspan="12" width="100%">
@@ -178,7 +174,6 @@ const sendEmail = async (req, res) => {
               </p>
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%">
               <p
@@ -198,7 +193,6 @@ const sendEmail = async (req, res) => {
               </p>
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%" style="text-align: center">
               <a
@@ -220,7 +214,6 @@ const sendEmail = async (req, res) => {
               </a>
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%">
               <p
@@ -245,7 +238,6 @@ const sendEmail = async (req, res) => {
               </p>
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%" style="border-bottom: 1px solid #ceab8e">
               <p
@@ -265,12 +257,10 @@ const sendEmail = async (req, res) => {
               </p>
             </td>
           </tr>
-
           <tr>
             <td colspan="0" style="padding-bottom: 10px; padding-top: 20px">
               <img src="https://i.postimg.cc/5NZP7chS/image-2.png" alt="" />
             </td>
-
             <td colspan="6" style="padding-bottom: 10px; padding-top: 20px">
               <p style="margin: 0; padding: 0">Best wishes from Dusty</p>
               <p style="margin: 0; padding: 0; font-size: 21px; font-weight: 700; text-decoration: none;">
@@ -280,7 +270,6 @@ const sendEmail = async (req, res) => {
               </p>
             </td>
           </tr>
-
           <tr>
             <td
               colspan="12"
@@ -289,7 +278,6 @@ const sendEmail = async (req, res) => {
               Connect with us
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%">
               <p style="text-align: center; margin: 0; padding: 0">
@@ -320,7 +308,6 @@ const sendEmail = async (req, res) => {
               </p>
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%" style="padding: 20px; text-align: center">
               <a style="margin-right: 10px; font-weight: bold"
@@ -330,7 +317,6 @@ const sendEmail = async (req, res) => {
               <a style="margin-right: 10px">Unsubscibe</a>
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%">
               <p
@@ -357,7 +343,6 @@ const sendEmail = async (req, res) => {
               </p>
             </td>
           </tr>
-
           <tr>
             <td colspan="12" width="100%" style="text-align: center; text-decoration: none;">
               © 2022 <a href="mailto: doshcapital.com.au" style="text-decoration: none; color: #000;">DoshCapital.com.au</a> | 7.2302.01
