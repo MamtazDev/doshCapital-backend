@@ -172,7 +172,7 @@ const sendEmail = async (req, res) => {
                 text-align: center;
                 font-weight: 700;
               ">
-              Dear {{user_name}}
+              Dear ${req.body.firstName}
             </p>
           </td>
         </tr>
@@ -231,11 +231,8 @@ const sendEmail = async (req, res) => {
                 text-align: center;
               ">
               Click on the button or copy the link on your browser
-              <a
-                href="https://doshcapital.com.au/?email={{user_email}}"
-                style="color: #ceab8e"
-                >https://doshcapital.com.au/?email={{user_email}}</a
-              >
+              <a href="https://doshcapital.com.au/?email=${req.body.email}" style="color: #ceab8e">
+              https://doshcapital.com.au/?email=${req.body.email}</a>
               to confirm your email
             </p>
           </td>
